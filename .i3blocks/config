@@ -33,34 +33,33 @@ markup=none
 # Memory usage
 #
 # The type defaults to "mem" if the instance is not specified.
-[memory]
-label=memory:
-separator=false
-interval=30
-separator=true
+#[memory]
+#label=
+#separator=false
+#interval=30
+#separator=true
 
 # Disk usage
 #
 # The directory defaults to $HOME if the instance is not specified.
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
-[disk]
-label=disk:
-#instance=/mnt/data
-interval=30
+#[disk]
+#label=
+##instance=/mnt/data
+#interval=30
 
 # Network interface monitoring
 #
 # If the instance is not specified, use the interface used for default route.
 # The address can be forced to IPv4 or IPv6 with -4 or -6 switches.
 #[iface]
-#instance=eth0
-#color=#FFFFFF
+#instance=enp0s31f6
 #interval=10
-#separator=false
+#separator=true
 
 [bandwidth]
-command=$SCRIPT_DIR/bandwidth -i '▼ ' -o '▲ '
+command=$SCRIPT_DIR/bandwidth -i ' ' -o ' '
 #instance=eth0
 interval=5
 
@@ -72,21 +71,22 @@ interval=5
 label=
 interval=10
 min_width=100%
-separator=false
+separator=true
 
 [load_average]
-label=av
+label=
 interval=10
 
 # Date Time
 #
 [time]
-command=date '+%Y/%m/%d %H:%M:%S'
+label=
+command=date '+%a %-d/%-m/%y %H:%M'
 interval=5
 
 # Volume indicator
 [volume]
-label=♪
+label=
 instance=Master
 interval=once
 signal=10
