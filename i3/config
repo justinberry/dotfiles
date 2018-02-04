@@ -186,4 +186,4 @@ bindsym XF86AudioMute exec $nosid amixer -q set Master toggle $updatebar
 
 # Pretty things
 exec --no-startup-id feh --recursive --randomize --bg-fill ~/Pictures/wallpaper/
-exec compton -b
+exec compton --vsync opengl -b
