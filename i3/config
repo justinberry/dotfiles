@@ -160,7 +160,7 @@ bar {
 
         position top
 
-        font pango:Cousine Bold, Font Awesome 15
+        font pango:Distortion Dos Digital, Font Awesome 15
         separator_symbol ◦
 
 		colors {

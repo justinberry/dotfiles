@@ -41,9 +41,10 @@ markup=none
 
 [activeapp]
 label=
-separator=true
+separator=false
 color=#26d508
 interval=1
+align=left
 
 # Disk usage
 #
@@ -54,6 +55,7 @@ interval=1
 label=
 #instance=/mnt/data
 interval=30
+color=#a0e301
 
 # Network interface monitoring
 #
@@ -68,6 +70,7 @@ interval=30
 command=$SCRIPT_DIR/bandwidth -i ' ' -o ' '
 #instance=eth0
 interval=5
+color=#aa5588
 
 # CPU usage
 #
@@ -78,10 +81,12 @@ label=
 interval=10
 min_width=100%
 separator=true
+color=#aa0022
 
 [load_average]
 label=
 interval=10
+color=#aa0022
 
 # Date Time
 #
@@ -89,6 +94,7 @@ interval=10
 label=
 command=date '+%a %-d/%-m/%y %H:%M'
 interval=5
+color=#e5e5e5
 
 # Volume indicator
 [volume]
@@ -96,3 +102,4 @@ label=
 instance=Master
 interval=once
 signal=10
+color=#ff471a
