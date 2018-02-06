@@ -41,7 +41,7 @@ markup=none
 
 [activeapp]
 label=
-separator=false
+separator=true
 color=#26d508
 interval=1
 align=left
