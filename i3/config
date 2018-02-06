@@ -160,11 +160,13 @@ bar {
 
         position top
 
-        font pango:Distortion Dos Digital, Font Awesome 15
-        separator_symbol ◦
+        #font pango:Distortion Dos Digital, Font Awesome 15
+        font pango:LCD Solid, Font Awesome 16
+        #separator_symbol ◦
+        separator_symbol |
 
 		colors {
-    		separator #dddddd
+    		separator #33aa33
     		background #000000
     		statusline #dddddd
     		focused_workspace #ffffff #000000 #fdf6e3
