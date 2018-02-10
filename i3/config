@@ -172,7 +172,7 @@ bar {
     		focused_workspace #ffffff #000000 #fdf6e3
     		active_workspace #fdf6e3 #6c71c4 #fdf6e3
     		inactive_workspace #002b36 #586e75 #002b36
-    		urgent_workspace #d33682 #d33682 #fdf6e3
+    		urgent_workspace #00ff00 #586e75 #002b36
   		}
 }
 
@@ -188,4 +188,4 @@ bindsym XF86AudioMute exec $nosid amixer -q set Master toggle $updatebar
 
 # Pretty things
 exec --no-startup-id feh --recursive --randomize --bg-fill ~/Pictures/wallpaper/
-exec compton --vsync opengl -b
+exec compton -b --vsync opengl
