@@ -190,7 +190,7 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Pause mode "$mode_system"
+bindsym $mod+BackSpace mode "$mode_system"
 
 # disable title bars
 for_window [class="^.*"] border pixel 0
