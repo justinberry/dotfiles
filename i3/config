@@ -197,10 +197,14 @@ for_window [class="^.*"] border pixel 0
 # Volume
 set $nosid --no-startup-id
 set $updatebar && pkill -RTMIN+10 i3blocks
-bindsym XF86AudioRaiseVolume exec $nosid pactl set-sink-volume 0 +5% $updatebar
-bindsym XF86AudioLowerVolume exec $nosid pactl set-sink-volume 0 -5% $updatebar
+#bindsym XF86AudioRaiseVolume exec $nosid pactl set-sink-volume 0 +5% $updatebar
+#bindsym XF86AudioLowerVolume exec $nosid pactl set-sink-volume 0 -5% $updatebar
+#bindsym XF86AudioMute exec $nosid amixer -q set Master toggle $updatebar
+
+bindsym XF86AudioRaiseVolume exec $nosid amixer -q sset Master 5%+ $updatebar
+bindsym XF86AudioLowerVolume exec $nosid amixer -q sset Master 5%- $updatebar
 bindsym XF86AudioMute exec $nosid amixer -q set Master toggle $updatebar
 
 # Pretty things
 exec --no-startup-id feh --recursive --randomize --bg-fill ~/Pictures/wallpaper/
-exec compton -b --vsync opengl
+exec compton -b --refresh-rate 144 #--vsync opengl
