@@ -14,7 +14,16 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 " Close vim if only nerd tree is open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+let NERDTreeMapOpenInTab='\r'
+
 " Close nerd tree with ctrl+n
 map <C-n> :NERDTreeToggle<CR>
 
+
 " Status bar https://vimawesome.com/plugin/vim-airline
+let g:airline#extensions#tabline#enabled = 1
+
+" Shift + arrows switch tabs
+map <S-l> :tabn<CR>
+map <S-h>  :tabp<CR>
+
